@@ -59,16 +59,20 @@ function imgData(data){
         creatImg.src = `https://image.tmdb.org/t/p/w500/${img.poster_path}`;
 
         moviesCards.appendChild(creatImg);
+        creatImg.addEventListener("click", ()=>{          
+
+            heroImg.src = creatImg.src;
+            info.innerHTML= ` <h1>${img.original_title}</h1>
+            <p>${img.overview}</p>
+            <div class="info">
+                <h6>relase date: <span style="color: goldenrod;">${img.release_date}</span> </h6>
+                <h6>ratings: <span style="color: goldenrod;">${img.vote_average}</span> </h6>
+                <h6>genre: <span style="color: goldenrod;">${img.genre_ids}</span></h6>
+            </div>`
+        })
     }
    
 }
 
 // add click event to all image cards to change hero image ======
-const cardImage = document.querySelectorAll(".card-img");
-cardImage.forEach((img) => {
-    
-    img.addEventListener("click", ()=>{
 
-        heroImg.src = img.src;
-    })
-});
