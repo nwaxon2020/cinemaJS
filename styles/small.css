@@ -27,7 +27,10 @@
         margin-bottom: 15px;
     }
     .hero-content h6{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+    }
+    .hero-content h6 span{
+        font-weight: bolder;
     }
     .errorPg{
         top: 70px;
